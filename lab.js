@@ -465,8 +465,17 @@ let myFirstVehicle = new Vehicle(6, "black", 150);
 */
 
 //Code Here
+//Found Youtube video called JavaScript Class #4: Inheritance & Extends//
+class Motorcycle extends Vehicle {
+  constructor(capacity, color, mileage, make, isCool){
+    super(capacity, color, mileage);
+    this.make = make;
+    this.isCool = isCool;
+  }
+}
 
-class Motorcycle extends Vehicle 
+/* in the "super", put the original parameters from the main class. The constructor for this new class must include the old and the new parameters."
+*/
 
 /*
   Create a Motorcycle using your new class and save it to a variable called myFirstMotorcycle
@@ -474,9 +483,23 @@ class Motorcycle extends Vehicle
 
 //Code Here 
 
+let myFirstMotorcycle= new Motorcycle(1, "silver", 50, 2021, "Cool");
+console.log(myFirstMotorcycle);
+
 /*
   Call the move function on myFirstMotorcycle (don't forget the parameter)
 */
+
+class Motorcycle {
+  constructor(capacity, color, mileage){
+    this.capacity = capacity,
+    this.color = color,
+    this.mileage = mileage
+  }
+  move(miles){
+    this.mileage=miles +this.mileage;
+  }
+  };
 
 /*
   Let's make another class based off of Vehicle. 
@@ -495,7 +518,15 @@ class Motorcycle extends Vehicle
 
 //Code Here
 
-
+class Boat extends Vehicle {
+constructor(capacity, color, mileage, name, type, isSeaWorthy){
+  super(capacity, color, mileage);
+  this.name = name
+  this.type = type
+  this.isSeaWorthy = isSeaWorthy
+}
+checkSeaWorthiness()
+}
 /*
   Create a new boat using your class. You can choose whatever values you like for all the 
   properties except isSeaworthy -- make that one false. Call your variable myFirstBoat.
